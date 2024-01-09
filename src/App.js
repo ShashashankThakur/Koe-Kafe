@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 import Home from "./Components/Slider";
 import Header from "./Components/Header";
 import Menu from './Components/Menu';
-import Popup from './Components/popup';
 import Workshop from './Components/Workshop'
 import About from './Components/About';
 import Footer from './Components/Footer';

@@ -43,7 +43,7 @@ const Menu = () => {
           <div className='flex justify-center md:pt-0 py-8'>
             <button
               onClick={() => window.open(KoeCafeFood, '_blank')}
-              className="bg-[#3B1C0A] md:w-[528px] w-[340px] text-[#ece0d1] py-2 rounded-xl hover:bg-[#b89d65] hover:text-[#3B1C0A]">
+              className="bg-[#3B1C0A] md:w-[528px] w-[340px] text-[#ece0d1] md:text-3xl md:py-3 py-2 rounded-xl hover:bg-[#b89d65] hover:text-[#3B1C0A]">
               View Menu
             </button>
           </div>
