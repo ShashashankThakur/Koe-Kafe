@@ -148,16 +148,13 @@ const Workshop = () => {
       <div className="container mx-auto p-8 bg-#D0BCA0 rounded-md shadow-md">
         <h2 className="text-3xl md:text-6xl font-semibold mb-8 text-center text-[#82614A]" style={{ fontFamily: 'Monospace' }} >W O R K S H O P</h2>
         <div className="grid grid-cols-1 gap-16">
-        
           <div>
             <h3 className="text-3xl font-semibold mb-4 text-[#82614A]" style={{ fontFamily:'lato, monospace' }}>Espresso Artistry Unleashed</h3><br></br>
-            <div data-aos="fade-up" data-aos-delay="200">
               <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-[#4F483F]">
                 {brewingProcessCards.map((card, index) => (
                   <BrewingProcessCard key={index} {...card} />
                 ))}
               </div>
-            </div>
             {isSubmitted ? (
               <p className="text-#82614A font-serif font-semibold mt-4 sm:text-sm lg:text-3xl">Thank you for reserving your spot! We'll see you at the workshop.</p>
             ) : (

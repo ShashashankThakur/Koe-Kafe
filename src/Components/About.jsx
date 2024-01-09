@@ -62,7 +62,6 @@ export default function AboutUsSlider() {
                 <div className="max-w-full overflow-hidden">
                     <Slider ref={sliderRef} {...settings}>
                         {aboutUsSlides.map((slide, index) => (
-                            <div data-aos="fade-up" data-aos-delay="200">
                             <div key={index} style={{ margin: '0 10px' }}>
                                 <div
                                     className={`w-full h-[400px] md:h-[400px] text-[#E2D3C4] bg-cover bg-center relative ${isSmall ? 'rounded-xl overflow-hidden' : ''}`} style={{ backgroundImage: `url(${slide.image})`, display: 'flex' }}
@@ -74,7 +73,6 @@ export default function AboutUsSlider() {
                                         <p className={`${isSmall ? 'text-sm mx-4 my-2 text-center' : 'text-md mx-8 my-4'} `}>{slide.description}</p>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         ))}
                     </Slider>

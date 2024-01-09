@@ -72,7 +72,6 @@ export default function MSlider() {
       <div className="max-w-full">
         <Slider ref={sliderRef} {...settings}>
           {reviews.map((review, index) => (
-            <div data-aos="fade-up" data-aos-delay="200">
             <div key={index} style={{ width: isSmall ? '100%' : '500px', height: isSmall ? '275px' : '450px', margin: '0 10px' }}>
               <div className="text-center bg-beige pb-4 rounded-xl mx-auto">
                 <img
@@ -84,7 +83,6 @@ export default function MSlider() {
                 <p className={`md:text-xl text-[#9F825B] font-semibold text-xs md:px-1 md:py-2`}>{review.Review}</p>
               </div>
 
-            </div>
             </div>
           ))}
         </Slider>
