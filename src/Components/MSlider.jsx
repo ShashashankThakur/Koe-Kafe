@@ -37,7 +37,8 @@ export default function MSlider() {
   }, []);
 
   return (
-    <div className="w-3/4 mx-auto">
+    
+    <div className="w-5/6 mx-auto">
       <div className="max-w-full">
         <Slider ref={sliderRef} {...settings}>
           {images.map((image, index) => (

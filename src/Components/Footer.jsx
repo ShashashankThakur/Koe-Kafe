@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    // FaFacebookSquare,
+    FaFacebookSquare,
     // FaGithubSquare,
     FaInstagram,
     // FaTwitterSquare,
@@ -18,8 +18,9 @@ const Footer = () => {
                 <h1 className='w-full text-5xl font-bold text-[#a08a6f]'>Koe</h1>
                 <p className='w-full text-xl font-semibold text-[#a08a6f] tracking-wide'>The Kafe</p>
                 <p className='py-4'>205, International Finance Centre, VIP Road, opp. Fire Station, Vesu Surat, Gujarat 395007</p>
-                <div className='flex justify-between md:w-[100%] my-6'>
+                <div className='flex gap-4 md:w-[100%] my-6'>
                     <FaInstagram size={40} className='hover:text-white' onClick={redirect}/>
+                    <FaFacebookSquare size={40} className='hover:text-white' onClick={redirect}/>
                 </div>
             </div>
             <div className='relative h-full w-full'>

@@ -6,11 +6,11 @@ import { BrowserRouter } from 'react-router-dom';
 import Home from "./Components/Slider";
 import Header from "./Components/Header";
 import Menu from './Components/Menu';
+import Popup from './Components/popup';
 import Workshop from './Components/Workshop'
 import About from './Components/About';
 import Footer from './Components/Footer';
 import Testimonials from './Components/testimonial';
-// import Popup from './Components/popup';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 // Mobile Components
@@ -25,13 +25,13 @@ const Typewriter = ({ text }) => {
 
   useEffect(() => {
     let index = 0;
-    const intervalId = setInterval(() => {
+      const intervalId = setInterval(() => {
       setDisplayText((prevText) => prevText + text[index]);
       index++;
 
       if (index === text.length-1) {
-        clearInterval(intervalId);
-        startBlinkingCursor();
+      startBlinkingCursor();
+      clearInterval(intervalId);
       }
     }, 175);
 
@@ -54,7 +54,7 @@ const Typewriter = ({ text }) => {
   return (
     <div className='animation_layer parallax text-6xl font-semibold text-beige relative'>
       <div className='inline-block'>{decodedText}</div>
-      {showCursor && <span className='inline-block w-1 h-15 bg-coffee'>&nbsp;</span>}
+      {showCursor && <span className='inline-block w-1 h-15 ml-1 bg-coffee'>&nbsp;</span>}
     </div>
   );
 };
@@ -74,7 +74,7 @@ function App() {
 
         <div className="parallaxer z-0">
 
-          <Parallax pages={1.5} style={{ top: '0', left: '0' }} className='sm:hidden animation bg-yellow-100'>
+          <Parallax pages={1.25} style={{ top: '0', left: '0' }} className='sm:hidden animation bg-yellow-100'>
 
             <ParallaxLayer offset={0}>
               <div className='animation_layer parallax' id='background'></div>
@@ -93,7 +93,7 @@ function App() {
             </ParallaxLayer>
 
             <ParallaxLayer offset={0.62}  speed={2.5} className='text-center'>
-              <Typewriter text="  Welcome to Koe's Kafe" textColor="white" cursorColor="red"/>
+              <Typewriter text="  Welcome to Koe's Kafe"/>
             </ParallaxLayer>
 
           </Parallax>
@@ -130,9 +130,11 @@ function App() {
 
         </div>
 
-        <div className='mobile lg:hidden scroll-smooth'>
+        <div className='mobile lg:hidden scroll-smooth overflow-x-hidden'>
 
           <div className="h-screen">
+
+            {/* <Popup /> */}
 
             <MHeader></MHeader>
           
@@ -140,7 +142,7 @@ function App() {
               <MHome></MHome>
             </div>
 
-            <div className="MSlider">
+            <div className="MSlider py-10">
               <MSlider></MSlider>
             </div>
 
