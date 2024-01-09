@@ -16,7 +16,7 @@ const Menu = () => {
         </div>
 
         <div className='w-full px-4 bg-transparent md:mb-[-10rem] mb-[-6rem]'>
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-delay="200">
           
           
           <div className='max-w-[1040px] mx-auto flex justify-center gap-0'>

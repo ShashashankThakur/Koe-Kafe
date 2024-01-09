@@ -66,7 +66,9 @@ export default function MSlider() {
   }, []);
 
   return (
+
     <div className="w-[95%] md:max-h-max max-h-max mx-auto">
+      <h2 className="text-3xl md:text-6xl font-semibold mb-8 text-center text-[#82614A]" style={{ fontFamily: 'Monospace' }} >R E V I E W S</h2>
       <div className="max-w-full">
         <Slider ref={sliderRef} {...settings}>
           {reviews.map((review, index) => (
