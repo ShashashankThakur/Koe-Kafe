@@ -43,7 +43,8 @@
 
 
 #Mbackground{
-  background-image: url('./Images/landing2.jpg');
+  /* background-image: url('./Images/landing2.jpg'); */
+  background-color: #E7DED0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

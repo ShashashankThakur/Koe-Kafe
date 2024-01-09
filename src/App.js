@@ -17,7 +17,6 @@ import MHome from './Components/MHome';
 import MHeader from './Components/MHeader';
 import MSlider from './Components/MSlider';
 
-
 const Typewriter = ({ text }) => {
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
@@ -63,9 +62,9 @@ function App() {
 
     <BrowserRouter>
 
-      <div className="App">
+      <div className="App bg-[#E7DED0]">
 
-        <div className='desktop hidden lg:block bg-[#E7DED0]'>
+        <div className='desktop hidden lg:block'>
 
         <div className="z-auto">
           <Header />
@@ -73,7 +72,7 @@ function App() {
 
         <div className="parallaxer z-0">
 
-          <Parallax pages={1.25} style={{ top: '0', left: '0' }} className='sm:hidden animation bg-yellow-100'>
+          <Parallax pages={1.25} style={{ top: '0', left: '0' }} className='sm:hidden animation bg-[#E7DED0]'>
 
             <ParallaxLayer offset={0}>
               <div className='animation_layer parallax' id='background'></div>
@@ -92,16 +91,20 @@ function App() {
             </ParallaxLayer>
 
             <ParallaxLayer offset={0.62}  speed={2.5} className='text-center'>
-              <Typewriter text="  Welcome to Koe's Kafe"/>
+              <Typewriter text="  WELCOME TO KOE'S KAFE"/>
             </ParallaxLayer>
 
           </Parallax>
 
         </div>
 
-          <div className='pt-[800px]'></div>
+          <div className='pt-[700px]'></div>
 
-          <div className='pt-[10px] z-10' id='home'>
+          <div className='pb-10 z-10' id='home'>
+            <div className="text-center text-[#412F26] pt-40 text-6xl font-semibold" style={{ fontFamily: 'Monospace' }}>
+              F L A V O R <br />  
+              F R A M E S
+            </div>
             <Home />
           </div>
 
@@ -133,8 +136,6 @@ function App() {
 
           <div className="h-screen">
 
-            {/* <Popup /> */}
-
             <MHeader></MHeader>
           
             <div id='MHome' className="MHome h-full bg-cover bg-center" style={{backgroundImage: "url('../Images/landing3.jpg')"}}>
@@ -157,7 +158,7 @@ function App() {
               <Testimonials />
             </div>
 
-            <div className="About" id='MAbout'>
+            <div className="About " id='MAbout'>
               <About />
             </div>
 

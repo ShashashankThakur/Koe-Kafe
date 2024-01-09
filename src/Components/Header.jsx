@@ -15,7 +15,7 @@ const MenuItem = ({ text, to }) => (
 export default function Header() {
   return (
     <nav className='fixed top-4 z-50 left-4 font-bold flex justify-center items-center text-beige text-2xl pt-4 w-full'>
-      <ul className='py-3 px-12 flex flex-row items-center justify-center bg-coffee gap-10 shadow-xl rounded-full border-2 border-beige'>
+      <ul className='py-3 px-12 flex flex-row items-center justify-center bg-[#3D281C] gap-10 shadow-xl rounded-full'>
         <MenuItem text='HOME' to='/#home' />
         <MenuItem text='MENU' to='/#menu'/>
         <MenuItem text={<img src={Logo} className='h-14' alt="Logo" />} to='/#Main' />

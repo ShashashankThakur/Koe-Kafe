@@ -37,6 +37,7 @@ export default function MSlider() {
   }, []);
 
   return (
+    <div data-aos="fade-up" data-aos-delay="200">
     <div className="w-[90%] mx-auto mt-32 z-0">
       <div>
         <Slider ref={sliderRef} {...settings}>
@@ -47,6 +48,7 @@ export default function MSlider() {
           ))}
         </Slider>
       </div>
+    </div>
     </div>
   );
 }

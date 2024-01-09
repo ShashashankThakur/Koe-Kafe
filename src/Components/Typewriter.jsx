@@ -33,7 +33,7 @@ const Typewriter = ({ text }) => {
   const decodedText = displayText.replace(/&apos;/g, "'").replace(/&quot;/g, '"');
 
   return (
-    <div className='animation_layer parallax text-6xl font-semibold text-beige relative'>
+    <div className='animation_layer parallax text-6xl font-mono font-bold text-[#E2D3C4] relative'>
       <div className='inline-block'>{decodedText}</div>
       {showCursor && <span className='inline-block w-1 h-15 bg-coffee'>&nbsp;</span>}
     </div>

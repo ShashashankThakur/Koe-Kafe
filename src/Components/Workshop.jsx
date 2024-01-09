@@ -6,7 +6,7 @@ const BrewingProcessCard = ({ title, description, imageSrc }) => {
 
   return (
     <div
-      className={`bg-white p-4 rounded-md shadow-md transition-transform transform ${
+      className={`bg-[#ededec] p-4 rounded-md shadow-md transition-transform transform ${
         isHovered ? 'scale-105' : ''
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -146,15 +146,17 @@ const Workshop = () => {
   return (
     <section className="bg-[#E7DED0] py-16 z-0">
       <div className="container mx-auto p-8 bg-#D0BCA0 rounded-md shadow-md">
-        <h2 className="text-3xl md:text-6xl font-semibold mb-8 text-center text-#82614A" style={{ fontFamily: 'Monospace' }} >W O R K S H O P</h2>
+        <h2 className="text-3xl md:text-6xl font-semibold mb-8 text-center text-[#82614A]" style={{ fontFamily: 'Monospace' }} >W O R K S H O P</h2>
         <div className="grid grid-cols-1 gap-16">
-         
+        
           <div>
-            <h3 className="text-3xl font-semibold mb-4 text-#8D765A" style={{ fontFamily:'lato, monospace' }}>Espresso Artistry Unleashed</h3><br></br>
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-              {brewingProcessCards.map((card, index) => (
-                <BrewingProcessCard key={index} {...card} />
-              ))}
+            <h3 className="text-3xl font-semibold mb-4 text-[#82614A]" style={{ fontFamily:'lato, monospace' }}>Espresso Artistry Unleashed</h3><br></br>
+            <div data-aos="fade-up" data-aos-delay="200">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-[#4F483F]">
+                {brewingProcessCards.map((card, index) => (
+                  <BrewingProcessCard key={index} {...card} />
+                ))}
+              </div>
             </div>
             {isSubmitted ? (
               <p className="text-#82614A font-serif font-semibold mt-4 sm:text-sm lg:text-3xl">Thank you for reserving your spot! We'll see you at the workshop.</p>
@@ -223,28 +225,39 @@ const Workshop = () => {
                   {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="description" className="text-#3B1C0A block mb-2 sm:text-sm lg:text-4xl font-serif font-semibold">Event Description</label><br></br>
-                  <p className="text-gray-#513726 mb-4 sm:text-sm lg:text-2xl font-serif">
+                  <label htmlFor="description" className="text-[#82614A] block mb-2 sm:text-sm lg:text-4xl font-serif font-bold">Event Description</label><br></br>
+                  <p className="text-[#82614A] mb-4 sm:text-sm lg:text-2xl font-serif">
                   Embark on a sensory journey with our exclusive coffee processing event – a symphony of flavors, artfully curated for coffee enthusiasts. Dive into the alchemy of roasting, grinding, brewing, and tasting, each step a brushstroke in the canvas of coffee creation. Join us in discovering the secrets behind the perfect cup, guided by our expert baristas. Immerse yourself in the rich aromas, textures, and stories that unfold in every sip. Elevate your coffee experience; it's not just a workshop – it's a masterpiece in the making. </p>
                 </div><br></br>
 
+                <label htmlFor="workshopDetails" className="text-[#82614A] block mb-4 sm:text-lg lg:text-2xl font-serif font-bold">Workshop Details</label><br></br>
+<p className="text-[#82614A] mb-6 sm:text-sm lg:text-lg font-serif">
+<ul className="list-disc pl-6 text-[#82614A] mb-6 sm:text-sm lg:text-lg font-serif">
+  <li>June 15, 2024 (Tentative)</li>
+  <li>June 22, 2024</li>
+  <li>June 29, 2024</li>
+</ul>
+
+  <strong>Time:</strong> Morning (9:00 AM - 12:00 PM) & Afternoon (2:00 PM - 5:00 PM)<br />
+  <strong>Location:</strong>205, International Finance Centre, VIP Road, opp. Fire Station, Vesu Surat, Gujarat 395007<br />
+  <strong>Social Media:</strong> Follow us @KoeKafe on Instagram <br />
+  <strong>Contact:</strong> (123) 456-7890, info@koekafe.com<br />
+
+</p>
+
                 <button
                   type="submit"
-                  className="bg-black text-white py-2 px-4 rounded-md hover:bg-#82614A focus:outline-none focus:ring focus:border-#82614A"
+                  className="bg-[#3D281C] text-[#E2D3C4] py-2 px-4 rounded-md hover:bg-#82614A focus:outline-none focus:ring focus:border-#82614A"
                 >
                   Reserve Your Spot
                 </button>
                 <button
                   type="button"
-                  className="bg-black text-white py-2 px-4 rounded-md ml-2 hover:bg-black focus:outline-none focus:ring focus:border-#82614A"
+                  className="bg-[#3D281C] text-[#E2D3C4] py-2 px-4 rounded-md ml-2 hover:bg-black focus:outline-none focus:ring focus:border-#82614A"
                   onClick={handleReset}
                 >
                   Reset
                 </button>
-
-               
-
-               
               </form>
             )}
           </div>

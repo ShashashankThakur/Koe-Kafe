@@ -1,17 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import img from '../Images/about.png';
-import { Fade } from 'react-reveal';
+import React, { useEffect, useRef, useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const About = () => {
+export default function AboutUsSlider() {
+    const sliderRef = useRef(null);
+    const [isSmall, setIsSmall] = useState(window.innerWidth <= 768);
 
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: isSmall ? 1 : 2,
+        slidesToScroll: 1,
+    };
+
+    const aboutUsSlides = [
+        {
+            image: '/Images/about_slide1.jpg',
+            title: "The Journey of Kôė",
+            description: "Kôė offers a unique micro-scale coffee roasting and culinary experience, going beyond the ordinary cafe. With a deep passion for coffee, we master roasting techniques and curate a diverse menu. Kôė is a haven for enthusiasts, telling a story of exploration and commitment to coffee culture. Our sustainability and fair trade practices support Indian coffee farmers. Welcome to Kôė, where the coffee experience is a vibrant tapestry of passion and quality.",
+        },
+        {
+            image: '/Images/about_slide3.jpg',
+            title: 'Supporting all communities',
+            description: "Koe's Kafe is a welcoming space for all, regardless of gender identity or sexual orientation. We actively support LGBTQ+ causes through awareness campaigns and partnerships, contributing to positive change. Our diverse menu caters to various tastes, and our events embrace diversity, fostering a sense of community. Join us in spreading love and acceptance at Koe's Kafe, where everyone is free to be themselves. Cheers to diversity, inclusion, and a warm cup of acceptance!",
+        },
+        {
+            image: '/Images/about_slide2.jpg',
+            title: 'Community Engagement',
+            description: "Discover a coffee haven at Koe's Kafe, Surat's exclusive spot for an exceptional coffee experience. With in-house roasting for the freshest flavors and a cutting-edge coffee machine skillfully handled by our baristas, each cup is a unique masterpiece. Redefining coffee culture in the city, we invite you to savor the extraordinary at Koe's Kafe, where every brew is a crafted memory. Join us in celebrating authenticity, craftsmanship, and unparalleled taste, one cup at a time",
+        },
+    ];
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSmallScreen(window.innerWidth < 770);
+            setIsSmall(window.innerWidth <= 768);
         };
-
-        handleResize();
 
         window.addEventListener('resize', handleResize);
 
@@ -20,45 +45,41 @@ const About = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (sliderRef.current) {
+                sliderRef.current.slickNext();
+            }
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="min-h-screen w-full flex flex-col items-center justify-center lg:px-32 px-5 pt-8 pb-8 bg-transparent">
-            <h1 className="text-6xl font-mono text-center lg:mt-14 mt-24 mb-8">ABOUT US</h1>
-
-            <div className="flex flex-col md:flex-row mt-5">
-
-                <Fade left>
-                    <div className="md:w-1/2 flex flex-col justify-center">
-                        <img
-                            src={img}
-                            alt="Coffee Beans"
-                            className={`${isSmallScreen ? 'w-1/3 md:h-72 h-auto mx-auto mb-10' : 'w-3/4 md:h-72 md:w-auto h-auto ml-auto'}`}
-                        />
-                    </div>
-                </Fade>
-
-                <Fade right>
-                    <div className="md:w-1/2 md:ml-20 flex flex-col justify-center">
-                        <h2 className="text-2xl font-bold mb-4">The Journey of Kôė</h2>
-                        <p className="mb-4 mt-5">
-                            In the inception of Kôė, the vision unfurled as a sublime microcosm of coffee roasting and gastronomic curation, enveloped in an ambiance that transcends the ordinary—an embodiment of a holistic experience tailored for our discerning clientele.
-                        </p>
-                        <p className="mb-4">
-                            At the heart of this venture lies an unwavering passion for coffee, a relentless pursuit of roasting excellence, and an ardent commitment to crafting a haven for aficionados. The odyssey embarked upon an immersive exploration of diverse coffee beans, an artful mastery of roasting techniques, and the meticulous curation of a menu that serves as a canvas for the myriad flavors encapsulated within the tapestry of global coffee origins.
-                        </p>
-                        <p className="mb-4">
-                            Kôė stands as a bastion of sustainability and ethical trade, its roots firmly planted in the advocacy for fair practices. With a fervent dedication to sourcing beans responsibly, our narrative intertwines with the story of Indian coffee farmers, echoing a commitment to their craft and fostering a symbiotic relationship between growers and connoisseurs alike. In every sip, we invite you to savor not just the essence of coffee but the collective spirit of an enduring journey—where passion, quality, and community converge to elevate the coffee experience to unprecedented heights.
-                        </p>
-                        <div className='mt-5 ml-start'>
-                            <button className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-600">
-                                Learn More
-                            </button>
-                        </div>
-                    </div>
-                </Fade>
-                
+            <h1 className="md:text-6xl text-4xl font-semibold text-center lg:mt-14 mb-8 text-[#4F483F]" style={{ fontFamily: 'Monospace' }}>A B O U T <br />U S</h1>
+            <div className="w-[95%] md:max-h-max max-h-max mx-auto">
+                <div className="max-w-full overflow-hidden">
+                    <Slider ref={sliderRef} {...settings}>
+                        {aboutUsSlides.map((slide, index) => (
+                            <div data-aos="fade-up" data-aos-delay="200">
+                            <div key={index} style={{ margin: '0 10px' }}>
+                                <div
+                                    className={`w-full h-[400px] md:h-[400px] text-[#E2D3C4] bg-cover bg-center relative ${isSmall ? 'rounded-xl overflow-hidden' : ''}`} style={{ backgroundImage: `url(${slide.image})`, display: 'flex' }}
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+                                    <div className="absolute inset-0 bg-black opacity-50"></div>
+                                    <div className="absolute inset-0 flex flex-col justify-center items-center">
+                                        <h3 className={`text-${isSmall ? 'xl mb-2' : '3xl mb-4'} font-serif font-semibold`}>{slide.title}</h3>
+                                        <p className={`${isSmall ? 'text-sm mx-4 my-2 text-center' : 'text-md mx-8 my-4'} `}>{slide.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
             </div>
         </div>
     );
-};
-
-export default About;
+}

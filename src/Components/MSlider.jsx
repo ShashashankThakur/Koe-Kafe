@@ -37,17 +37,18 @@ export default function MSlider() {
   }, []);
 
   return (
-    
-    <div className="w-5/6 mx-auto">
+    <div className="w-5/6 mx-auto mt-8 text-center">
+      <h2 className="text-4xl font-semibold mb-2" style={{ fontFamily: 'Monospace' }}>F L A V O R</h2>
+      <h2 className="text-4xl font-semibold mb-4" style={{ fontFamily: 'Monospace' }}>F R A M E S</h2>
       <div className="max-w-full">
         <Slider ref={sliderRef} {...settings}>
           {images.map((image, index) => (
             <div key={index} className="rounded-lg overflow-hidden">
-              <img className="w-full" src={image} alt={`Slide ${index + 1}`} />
+              <img className="w-full" src={image}/>
             </div>
           ))}
         </Slider>
       </div>
-    </div>
-  );
+    </div>
+  );
 }
