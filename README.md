@@ -27,6 +27,8 @@ This web app was created for a cafe called Koe The Kafe to participate in the Go
 - React.JS
 
 
+---
+
 Team Name: SpideyWebbers
 
 Team Members:
