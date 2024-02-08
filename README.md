@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Koe The Kafe
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web app was created for a cafe called Koe The Kafe to participate in the Google Winter of Code (GWoC) organized by our university's Google Developer Student Club. We developed a captivating website that captures the essence of Koe Cafe's unique charm and exceptional coffee experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Problem Statement
 
-### `npm start`
+- Develop a dynamic website for Koe Cafe, a premium establishment with in-house  coffee roasting, live streaming capabilities, and an extensive menu featuring authentic continental flavors.
+- Highlighting specialties in coffee, bread, and cheeses, the website will serve as a platform for patrons to explore Koe Cafe's ambiance and offerings.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Specifications
 
-### `npm test`
+ - Build a sleek website for Koe Cafe, emphasizing its premium features like in-house coffee roasting, live streaming, and an extensive continental menu.
+ - Focus on coffee, bread, and cheeses as Koe Cafe's specialties.
+ - Highlight an upcoming coffee workshop on the website, teasing the exciting prospects of coffee identification, grading, roasting, blending, and cupping.
+ - Streamline navigation by excluding a menu page; instead, include a direct link for users to access the extensive menu effortlessly.
+ - Infuse creativity into the design to mirror Koe Cafe's pretty ambiance and commitment to premium experiences.
+ - The website should be responsive- accessible from laptops and other devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## What we used to build this project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- HTML
+- Tailwind CSS
+- JavaScript
+- React.JS
