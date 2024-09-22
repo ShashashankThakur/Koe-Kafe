@@ -29,9 +29,8 @@ This web app was created for a cafe called Koe The Kafe to participate in the Go
 
 ---
 
-Team Name: SpideyWebbers
-
-Team Members:
+#### Team SpideyWebbers
+Members:
 - Aayudh Panchal
 - Keya Patel
 - Shashank Thakur
